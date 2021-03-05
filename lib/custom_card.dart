@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:reddit_client/detail.dart';
-import 'package:reddit_client/data.dart';
+import 'detail.dart';
+import 'data.dart';
 
 class CustomCard extends StatelessWidget {
   final Data data;

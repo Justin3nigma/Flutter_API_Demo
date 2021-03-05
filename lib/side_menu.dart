@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'strings.dart';
+
 class SideMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -8,24 +10,24 @@ class SideMenu extends StatelessWidget {
             DrawerHeader(
               child: Column(
                 children: [
-                  Text('email'),
+                  Text(Strings.Email),
                 ],
               ),
             ),
             ListTile(
-              title: Text('Home'),
+              title: Text(Strings.Home),
               onTap: () {
                 Navigator.pop(context);
               },
             ),
             ListTile(
-              title: Text('Help & Feedback'),
+              title: Text(Strings.HelpFeedback ),
               onTap: () {
                 Navigator.pop(context);
               },
             ),
             ListTile(
-              title: Text('Terms of Service'),
+              title: Text(Strings.TermsOfService),
               onTap: () {
                 Navigator.pop(context);
               },

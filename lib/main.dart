@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:reddit_client/login.dart';
 import 'package:splashscreen/splashscreen.dart';
-import 'package:reddit_client/design_data.dart';
+import 'login.dart';
+import 'strings.dart';
+import 'design_data.dart';
 
 void main(){
   runApp(new MaterialApp(
@@ -32,7 +33,7 @@ class SplashState extends State<Splashscreen> {
           return new SplashScreen(
             seconds: 14,
             navigateAfterSeconds: new AfterSplash(),
-            title: new Text('Welcome To Flutter API Demo',
+            title: new Text(Strings.Welcome,
               style: new TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20.0

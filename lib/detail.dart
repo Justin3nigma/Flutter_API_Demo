@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:reddit_client/data.dart';
+import 'data.dart';
+import 'strings.dart';
 
 class DetailView extends StatelessWidget {
   final Data data;
@@ -11,7 +12,7 @@ class DetailView extends StatelessWidget {
     return Scaffold(
         resizeToAvoidBottomPadding: false,
         appBar: AppBar(
-          title: Text('Flutter API Demo'),
+          title: Text(Strings.FlutterAPIDemo),
         ),
         body: SingleChildScrollView(
             child: Column(

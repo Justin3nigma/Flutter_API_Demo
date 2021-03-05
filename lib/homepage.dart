@@ -2,10 +2,11 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
-import 'package:reddit_client/data.dart';
-import 'package:reddit_client/side_menu.dart';
-import 'package:reddit_client/custom_card.dart';
-import 'package:reddit_client/design_data.dart';
+import 'data.dart';
+import 'side_menu.dart';
+import 'custom_card.dart';
+import 'design_data.dart';
+import 'strings.dart';
 import 'dart:async';
 
 void main() {
@@ -78,7 +79,7 @@ class _HomePageState extends State<HomePage> {
             home: Scaffold(
               backgroundColor: Color(snapshot.data.grey),
               appBar: AppBar(
-                title: Text('Flutter API Demo'),
+                title: Text(Strings.FlutterAPIDemo),
                 backgroundColor: Color(snapshot.data.color1),
               ),
               body: ListView(
@@ -123,15 +124,15 @@ class _HomePageState extends State<HomePage> {
                 items: [
                   BottomNavigationBarItem(
                     icon: new Icon(Icons.home),
-                    title: new Text('Home'),
+                    title: new Text(Strings.Home)
                   ),
                   BottomNavigationBarItem(
                     icon: new Icon(Icons.mail),
-                    title: new Text('Messages'),
+                    title: new Text(Strings.Message)
                   ),
                   BottomNavigationBarItem(
                       icon: Icon(Icons.person),
-                      title: Text('Profile')
+                      title: Text(Strings.Profile)
                   )
                 ],
               ),

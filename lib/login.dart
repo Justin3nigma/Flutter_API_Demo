@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:reddit_client/homepage.dart';
+import 'package:reddit_client/strings.dart';
+import 'homepage.dart';
 import 'design_data.dart';
-import 'package:reddit_client/design_data.dart';
 
 void main(){
   runApp(Login());
@@ -61,7 +61,7 @@ class _LoginPageState extends State<LoginPage> {
                         SizedBox(height: 10.0,),
 
                         Center(
-                            child: Text('DEMO',
+                            child: Text(Strings.Demo,
                               style: TextStyle(
                                 fontSize: 30.0,
                                 letterSpacing: 5.0,
@@ -81,17 +81,17 @@ class _LoginPageState extends State<LoginPage> {
                           TextFormField(
                             controller: etEmail,
                             decoration: InputDecoration(
-                                labelText: 'email address',
+                                labelText: Strings.EmailAddress,
                                 icon: const Padding(
                                     padding: const EdgeInsets.only(top: 15.0),
                                     child: const Icon(Icons.mail))
                             ),
                             validator: (value){
                               if (value.isEmpty){
-                                return 'Please Enter Your Email Address';
+                                return Strings.EnterEmail;
                               }
                               else if(!isEmail(value)){
-                                return 'Email Address is not Valid';
+                                return Strings.EmailNotValid;
                               }
                               else {
                                 nEmail = value;
@@ -102,7 +102,7 @@ class _LoginPageState extends State<LoginPage> {
                           TextFormField(
                             controller: etPassword,
                             decoration: InputDecoration(
-                                labelText: 'password',
+                                labelText: Strings.PassWord,
                                 icon: const Padding(
                                   padding: const EdgeInsets.only(top: 15.0),
                                   child: const Icon(Icons.lock),
@@ -110,7 +110,7 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                             validator: (value){
                               if (value.isEmpty){
-                                return 'Please Enter Your Password';
+                                return Strings.EnterPassword;
                               }
                               else {
                                 return null;
@@ -137,7 +137,7 @@ class _LoginPageState extends State<LoginPage> {
                                 ));
                               }
                             },
-                            child: Text('Login',
+                            child: Text(Strings.Login,
                                 style: TextStyle(
                                   fontSize: 20,
                                   color:  Color(snapshot.data.white),
